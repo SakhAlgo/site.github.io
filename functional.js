@@ -81,16 +81,14 @@ basket.addEventListener('click', function(){
     main.style.display = 'none'
     basket_list.innerHTML = '<hr>'
     for(let i=0; i<basket_array.length; i++){
-        basket_list.innerHTML = basket_list.innerHTML + `<h3 width="300px">${i+1}.  ${basket_array[i].name}</h3> <img height="50px" src="${basket_array[i].photo}"/img><h4>  ${basket_array[i].price} руб.</h4><hr>`
+        basket_list.innerHTML = basket_list.innerHTML + `<h3 width="300px">${i+1}. ${basket_array[i].name}</h3> <img height="50px" src="${basket_array[i].photo}"/img><h4>  ${basket_array[i].price} руб.</h4><hr>`
         result = +result + +basket_array[i].price      
         
     }
     basket_list.innerHTML = basket_list.innerHTML + `<h3 width="300px">Итого:  ${result} руб.<h3>`
     basket_list.innerHTML = basket_list.innerHTML + `<p class='clear'>Очистить</p>`
     basket_list.style.display = 'block'
-    clear.style.display = 'block'
-
-    
+    clear.style.display = 'block'    
 })
 
 category.addEventListener('click', function(){
